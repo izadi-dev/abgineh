@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/colorBackground"
+    >
+    <androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_marginTop="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/toolbar"
+     android:textAlignment="center"
+    android:elevation="1dp"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+     app:titleTextColor="@color/colorText"
+    app:title="abgineh">
+
+</androidx.appcompat.widget.Toolbar>
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/nameproject"
+    android:layout_marginTop="1dp"
+    android:textColor="@color/colorText"
+    android:textColorHint="@color/colorText"
+    android:hint="نام پروژه را وارد کنید"
+
+    />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_marginTop="1dp"
+    android:gravity="center"
+
+    >
+
+    <EditText
+        android:id="@+id/etWidth"
+        android:hint="عرض"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:textColorHint="@color/colorText"
+        tools:ignore="ButtonStyle,HardcodedText" />
+
+    <EditText
+        android:id="@+id/etHeight"
+        android:hint="ارتفاع"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="ButtonStyle,HardcodedText" />
+
+    <EditText
+        android:id="@+id/etQty"
+        android:hint="تعداد"
+        android:textColorHint="@color/colorText"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:textColor="@color/colorText"
+        tools:ignore="ButtonStyle,HardcodedText"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/btn_style"
+        android:text="افزودن"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        tools:ignore="ButtonStyle,HardcodedText" />
+
+</LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:gravity="center_horizontal"
+        >
+
+
+
+        <Button
+
+            android:text="ذخیره پروژه"
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:background="@drawable/btn_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/colorText"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/btnProjects"
+            android:text="بازکردن پروژه"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:background="@drawable/btn_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:textColor="@color/colorText"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/btnOptimize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:background="@drawable/btn_style"
+            android:text="بهینه سازی"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:textColor="@color/colorText"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/btnPdf"
+            android:text="خروجی PDF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:background="@drawable/btn_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:textColor="@color/colorText"
+            />
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPieces"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="150dp"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtInfo"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="10dp"/>-->
+
+    <com.example.abgineh.SheetView
+        android:background="@drawable/border_style"
+         android:id="@+id/sheetView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:textColor="@color/colorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="قبلی"
+            android:background="@drawable/btn_style"
+            android:layout_marginStart="0dp"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+
+        <TextView
+            android:id="@+id/pageNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:gravity="center"
+            android:hint="شماره صفحه"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorText" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:textColor="@color/colorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="بعدی"
+            android:background="@drawable/btn_style"
+            android:layout_marginStart="00dp"
+            tools:ignore="ButtonStyle,HardcodedText" />
+    </LinearLayout>
+
+
+</LinearLayout>

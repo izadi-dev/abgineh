@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:padding="10dp">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/toolbar"
+        android:textAlignment="center"
+        android:elevation="1dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:titleTextColor="@color/colorText"
+        app:title="abgineh">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:layout_marginTop="10dp"
+        android:id="@+id/listProjects"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+         />
+
+</LinearLayout>
