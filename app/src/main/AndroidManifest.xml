@@ -29,7 +29,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.abgineh.ProjectsActivity">
-
+        </activity>
+        <activity android:name="com.example.abgineh.OptimizActivity">
         </activity>
     </application>
 

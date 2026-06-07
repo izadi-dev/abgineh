@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="10dp"
+android:background="@color/colorBackground"
+    >
+
+    <com.example.abgineh.SheetView
+
+        android:background="@drawable/border_style"
+        android:id="@+id/sheetView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="80dp"
+        tools:ignore="MissingConstraints" />
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:gravity="center"
+    android:layout_marginTop="5dp"
+    android:orientation="horizontal">
+    <Button
+        android:id="@+id/btnPrev"
+        android:textColor="@color/colorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="قبلی"
+        android:background="@drawable/btn_style"
+        android:layout_marginStart="0dp"
+        tools:ignore="ButtonStyle,HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/pageNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:gravity="center"
+        android:hint="شماره صفحه"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:textColor="@color/colorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="بعدی"
+        android:background="@drawable/btn_style"
+        android:layout_marginStart="00dp"
+        tools:ignore="ButtonStyle,HardcodedText" />
+</LinearLayout>
+</LinearLayout>

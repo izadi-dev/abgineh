@@ -17,11 +17,13 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import androidx.core.content.FileProvider;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.abgineh.myapp.R;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnProjects;
     EditText nameproject;
 //    TextView txtInfo;
-
+    DrawerLayout drawer_layout;
     SheetView sheetView;
 
     public List<GlassPiece> pieces =
@@ -62,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         // دیتابیس
         db = androidx.room.Room.databaseBuilder(
@@ -220,22 +223,29 @@ public class MainActivity extends AppCompatActivity {
 
 
         btnOptimize.setOnClickListener(
+
                 view -> {
+                    Intent intent =new Intent(MainActivity.this,OptimizActivity.class);
+                    intent.putExtra(
+                            "pieces",
+                            (Serializable) pieces
+                    );
+                    startActivity(intent);
 
-                    optimizer =
-                            new GlassOptimizer(
-                                    3210,
-                                    2250
-                            );
-
-                sheets =
-                        optimizer.optimize(pieces);
-
-                currentSheet = 0;
-
-                    showSheet(currentSheet);
-                    Toast.makeText(MainActivity.this, "بهینه انجام شد", Toast.LENGTH_SHORT).show();
-                });
+//                    optimizer =
+//                            new GlassOptimizer(
+//                                    3210,
+//                                    2250
+//                            );
+//
+//                sheets =
+//                        optimizer.optimize(pieces);
+//
+//                currentSheet = 0;
+//
+//                    showSheet(currentSheet);
+//                    Toast.makeText(MainActivity.this, "بهینه انجام شد", Toast.LENGTH_SHORT).show();
+               });
 
         btnNext.setOnClickListener(
                 view -> {
