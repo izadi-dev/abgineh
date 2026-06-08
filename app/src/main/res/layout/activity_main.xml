@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
@@ -98,32 +98,56 @@
         android:textColor="@color/colorText"
         tools:ignore="ButtonStyle,HardcodedText"/>
 
+
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+
+        >
     <Button
         android:id="@+id/btnAdd"
-        android:layout_width="60dp"
-        android:layout_height="40dp"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="1dp"
         android:background="@drawable/btn_style"
         android:text="افزودن"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintVertical_chainStyle="packed"
+        android:textSize="20sp"
         android:textColor="@color/colorText"
         android:textColorHint="@color/colorText"
         tools:ignore="ButtonStyle,HardcodedText" />
 
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPieces"
+        android:background="@drawable/list_style"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="250dp"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:gravity="center_horizontal">
+    <Button
+        android:id="@+id/btnOptimize"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/btn_style"
+        android:text="بهینه سازی"
+        android:textColor="@color/colorText"
+        android:textSize="25dp"
+               />
 </LinearLayout>
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         >
 
@@ -136,6 +160,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="1dp"
+            android:textSize="20sp"
+            android:padding="10dp"
             android:background="@drawable/btn_style"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -149,6 +175,8 @@
         <Button
             android:id="@+id/btnProjects"
             android:text="بازکردن پروژه"
+            android:textSize="20sp"
+            android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="1dp"
@@ -162,99 +190,8 @@
             android:textColor="@color/colorText"
             app:layout_constraintVertical_chainStyle="packed" />
 
-        <Button
-            android:id="@+id/btnOptimize"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="1dp"
-            android:background="@drawable/btn_style"
-            android:text="بهینه سازی"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            android:textColor="@color/colorText"
-            app:layout_constraintVertical_chainStyle="packed" />
 
-        <Button
-            android:id="@+id/btnPdf"
-            android:text="خروجی PDF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="1dp"
-            android:background="@drawable/btn_style"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintVertical_chainStyle="packed"
-            android:textColor="@color/colorText"
-            />
 
     </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerPieces"
-        android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_height="150dp"/>
-
-<!--    <TextView-->
-<!--        android:id="@+id/txtInfo"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="10dp"/>-->
-
-    <com.example.abgineh.SheetView
-        android:background="@drawable/border_style"
-         android:id="@+id/sheetView"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="10dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:gravity="center"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal">
-
-
-
-        <Button
-            android:id="@+id/btnPrev"
-            android:textColor="@color/colorText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="قبلی"
-            android:background="@drawable/btn_style"
-            android:layout_marginStart="0dp"
-            tools:ignore="ButtonStyle,HardcodedText" />
-
-
-        <TextView
-            android:id="@+id/pageNum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
-            android:gravity="center"
-            android:hint="شماره صفحه"
-            android:textColor="@color/colorText"
-            android:textColorHint="@color/colorText" />
-
-        <Button
-            android:id="@+id/btnNext"
-            android:textColor="@color/colorText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="بعدی"
-            android:background="@drawable/btn_style"
-            android:layout_marginStart="00dp"
-            tools:ignore="ButtonStyle,HardcodedText" />
-    </LinearLayout>
-
 
 </LinearLayout>

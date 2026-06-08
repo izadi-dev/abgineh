@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="@drawable/list_style"
+    android:background="@drawable/itemstyle"
     android:padding="10dp">
 
     <TextView

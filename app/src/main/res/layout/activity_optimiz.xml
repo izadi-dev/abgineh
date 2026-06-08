@@ -10,6 +10,7 @@ android:padding="10dp"
 android:background="@color/colorBackground"
     >
 
+
     <com.example.abgineh.SheetView
 
         android:background="@drawable/border_style"
@@ -22,7 +23,7 @@ android:background="@color/colorBackground"
 
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="30dp"
+    android:layout_height="wrap_content"
     android:gravity="center"
     android:layout_marginTop="5dp"
     android:orientation="horizontal">
@@ -32,6 +33,7 @@ android:background="@color/colorBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="قبلی"
+        android:textSize="20sp"
         android:background="@drawable/btn_style"
         android:layout_marginStart="0dp"
         tools:ignore="ButtonStyle,HardcodedText" />
@@ -54,8 +56,27 @@ android:background="@color/colorBackground"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="بعدی"
+        android:textSize="20sp"
         android:background="@drawable/btn_style"
         android:layout_marginStart="00dp"
         tools:ignore="ButtonStyle,HardcodedText" />
 </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPdf"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:background="@drawable/btn_style"
+            android:text="خروجی PDF"
+            android:textColor="@color/colorText"
+            android:textSize="20dp" />
+    </LinearLayout>
+
 </LinearLayout>
