@@ -33,7 +33,9 @@
     android:hint="نام پروژه را وارد کنید"
 
     />
-<LinearLayout
+
+
+    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="45dp"
     android:layout_marginTop="1dp"
@@ -43,7 +45,7 @@
 
     <EditText
         android:id="@+id/etWidth"
-        android:hint="عرض"
+        android:hint=" mmعرض"
         android:textAlignment="center"
         android:textColor="@color/colorText"
         android:layout_width="100dp"
@@ -62,7 +64,7 @@
 
     <EditText
         android:id="@+id/etHeight"
-        android:hint="ارتفاع"
+        android:hint="mmارتفاع"
         android:textAlignment="center"
         android:textSize="18sp"
         android:layout_width="100dp"
@@ -81,7 +83,7 @@
 
     <EditText
         android:id="@+id/etQty"
-        android:hint="تعداد"
+        android:hint=" تعداد"
         android:textColorHint="@color/colorText"
         android:textAlignment="center"
         android:textSize="18sp"
@@ -151,10 +153,7 @@
         android:gravity="center_horizontal"
         >
 
-
-
         <Button
-
             android:text="ذخیره پروژه"
             android:id="@+id/btnSave"
             android:layout_width="wrap_content"
@@ -193,5 +192,22 @@
 
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        >
+    <Button
+        android:id="@+id/btnnew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_style"
+        android:text="جدید"
+        android:textSize="20sp"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        tools:ignore="ButtonStyle,HardcodedText" />
 
+    </LinearLayout>
 </LinearLayout>

@@ -30,6 +30,7 @@ public class OptimizActivity extends AppCompatActivity {
     Button btnPrev;
     SheetView sheetView;
     Button btnPdf;
+    Button btninvoice;
     List<List<Placement>> sheets;
 
     GlassOptimizer optimizer;
@@ -45,6 +46,7 @@ public class OptimizActivity extends AppCompatActivity {
         sheetView = findViewById(R.id.sheetView);
         btnNext = findViewById(R.id.btnNext);
         btnPrev = findViewById(R.id.btnPrev);
+        btninvoice=findViewById(R.id.btninvoice);
 
         pageNum=findViewById(R.id.pageNum);
         btnPdf=findViewById(R.id.btnPdf);
@@ -134,7 +136,23 @@ private  void runOptimaiz(){
                     exportPdf();
                 }
             });
+    btninvoice.setOnClickListener(
+            view -> {
 
+                Intent intent = new Intent(
+                        OptimizActivity.this,
+                        InvoiceActivity.class);
+
+                intent.putExtra(
+                        "pieces",
+                        (java.io.Serializable) pieces);
+                intent.putExtra(
+                        "sheetCount",
+                        sheets.size());
+                startActivity(intent);
+
+            }
+    );
 
     }
     private void exportPdf() {

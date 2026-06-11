@@ -1,4 +1,6 @@
 package com.example.abgineh;
+import static androidx.collection.ScatterMapKt.Empty;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Canvas;
@@ -18,6 +20,7 @@ import android.widget.Toolbar;
 
 import androidx.core.content.FileProvider;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.lifecycle.viewmodel.CreationExtras;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.abgineh.myapp.R;
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     EditText etQty;
    AppDatabase db;
     Button btnAdd;
+    Button btnnew;
     Button btnSave;
     Button btnOptimize;
     TextView pageNum;
@@ -122,14 +126,27 @@ public class MainActivity extends AppCompatActivity {
         btnPdf = findViewById(R.id.btnPdf);
         btnProjects = findViewById(R.id.btnProjects);
         pageNum=findViewById(R.id.pageNum);
+        btnnew = findViewById(R.id.btnnew);
 
 //        txtInfo = findViewById(R.id.txtInfo);
 
         sheetView = findViewById(R.id.sheetView);
+        btnnew.setOnClickListener(v -> {
 
+            nameproject.setText("");
+
+            pieces.clear();
+
+            adapter.notifyDataSetChanged();
+
+            Toast.makeText(this,
+                    "پروژه جدید ایجاد شد",
+                    Toast.LENGTH_SHORT).show();
+        });
 
         btnSave.setOnClickListener(
                 view ->{
+
                     saveProject();
                     Toast.makeText(MainActivity.this, "پروژه ذخیره شد", Toast.LENGTH_SHORT).show();
                 }
@@ -573,7 +590,14 @@ private void LoadProject(int id){
 //    }
 
     private void saveProject() {
+
         String name = nameproject.getText().toString().trim();
+        if (name == null || name.isEmpty()) {
+            Toast.makeText(this,
+                    "نام وارد کنید",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
         if(db.projectDao().countbyName(name)>0)
         {
             Toast.makeText(this,"پروژه با این نام قبلا ذخیره شده است",Toast.LENGTH_SHORT).show();
@@ -604,9 +628,9 @@ private void LoadProject(int id){
 
             db.projectDao().insert(project);
 
-        nameproject.setText("");
+//        nameproject.setText("");
 
-         pieces.clear();
+//         pieces.clear();
 
 //            txtInfo.setText("پروژه ذخیره شد");
         }

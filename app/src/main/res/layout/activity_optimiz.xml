@@ -77,6 +77,25 @@ android:background="@color/colorBackground"
             android:text="خروجی PDF"
             android:textColor="@color/colorText"
             android:textSize="20dp" />
+
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btninvoice"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:background="@drawable/btn_style"
+            android:text="فاکتور"
+            android:textColor="@color/colorText"
+            android:textSize="20dp" />
+    </LinearLayout>
+
 
 </LinearLayout>
