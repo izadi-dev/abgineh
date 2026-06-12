@@ -70,10 +70,10 @@ android:background="@color/colorBackground"
 
         <Button
             android:id="@+id/btnPdf"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="1dp"
-            android:background="@drawable/btn_style"
+            android:background="@drawable/btn_style1"
             android:text="خروجی PDF"
             android:textColor="@color/colorText"
             android:textSize="20dp" />
@@ -88,7 +88,7 @@ android:background="@color/colorBackground"
 
         <Button
             android:id="@+id/btninvoice"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="1dp"
             android:background="@drawable/btn_style"

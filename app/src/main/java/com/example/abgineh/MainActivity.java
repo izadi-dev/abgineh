@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.net.Uri;
 import android.widget.Toast;
@@ -24,6 +26,8 @@ import androidx.lifecycle.viewmodel.CreationExtras;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.abgineh.myapp.R;
+import com.google.android.material.navigation.NavigationView;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.Serializable;
@@ -39,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
    AppDatabase db;
     Button btnAdd;
     Button btnnew;
+    Toolbar toolbar;
     Button btnSave;
     Button btnOptimize;
     TextView pageNum;
@@ -50,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
 //    TextView txtInfo;
     DrawerLayout drawer_layout;
     SheetView sheetView;
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+
 
     public List<GlassPiece> pieces =
             new ArrayList<>();
@@ -68,6 +76,48 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        drawerLayout = findViewById(R.id.drawerLayout);
+        navigationView = findViewById(R.id.navigationView);
+
+//        toolbar = findViewById(R.id.toolbar);
+
+//        setSupportActionBar(toolbar);
+
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+//                this,
+//                drawerLayout,
+//                toolbar,
+//                R.string.open,
+//                R.string.close
+//        );
+
+//        drawerLayout.addDrawerListener(toggle);
+//        toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(item -> {
+
+            int id = item.getItemId();
+
+            if (id == R.id.nav_about) {
+                Toast.makeText(MainActivity.this,"tttt",Toast.LENGTH_SHORT).show();
+
+            }
+
+            else if (id == R.id.nav_contact) {
+                // تماس با ما
+            }
+
+            else if (id == R.id.nav_tutorial) {
+                // آموزش
+            }
+
+            else if (id == R.id.nav_exit) {
+                finish();
+            }
+
+            drawerLayout.closeDrawers();
+            return true;
+        });
 
 
         // دیتابیس
