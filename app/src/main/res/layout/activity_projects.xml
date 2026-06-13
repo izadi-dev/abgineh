@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/colorBackground"
-    android:padding="10dp">
+    android:padding="0dp">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:background="@drawable/toolbar"
-        android:textAlignment="center"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="#367A38"
         android:elevation="1dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:titleTextColor="@color/colorText"
-        app:title="abgineh">
+        android:textAlignment="center"
+        app:titleTextColor="@color/colorText">
+
 
     </androidx.appcompat.widget.Toolbar>
 

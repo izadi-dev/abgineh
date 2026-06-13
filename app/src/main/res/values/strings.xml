@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">abgineh</string>
+    <string name="open">باز کردن منو</string>
+    <string name="close">بستن منو</string>
 </resources>
