@@ -42,8 +42,9 @@
     android:id="@+id/nameproject"
     android:layout_marginTop="20dp"
     android:textColor="@color/colorText"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textAlignment="center"
         android:textSize="20sp"
         android:background="@drawable/text_style"
     android:textColorHint="@color/colorText"
@@ -244,7 +245,10 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorBackground"
+        app:headerLayout="@layout/nav_header"
+        app:itemTextColor="@color/colorButten"
+        app:itemTextAppearance="@style/NavMenuTextStyle"
         app:menu="@menu/drawer"/>
 
 

@@ -86,20 +86,27 @@ public class MainActivity extends AppCompatActivity {
             int id = item.getItemId();
 
             if (id == R.id.nav_about) {
-                Toast.makeText(MainActivity.this,"tttt",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, about.class);
+                startActivity(intent);
+//                Toast.makeText(MainActivity.this,"tttt",Toast.LENGTH_SHORT).show();
 
             }
 
             else if (id == R.id.nav_contact) {
+                Intent intent = new Intent(MainActivity.this, contact.class);
+                startActivity(intent);
                 // تماس با ما
             }
 
             else if (id == R.id.nav_tutorial) {
+                Intent intent = new Intent(MainActivity.this, tutorial.class);
+                startActivity(intent);
                 // آموزش
             }
 
             else if (id == R.id.nav_exit) {
-                finish();
+                finishAffinity();
+//                break;
             }
 
             drawerLayout.closeDrawers();
@@ -337,7 +344,10 @@ public class MainActivity extends AppCompatActivity {
 //                });
     }
 
-@SuppressLint("NotifyDataSetChanged")
+    private void finishActivity() {
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
 private void LoadProject(int id){
 
     ProjectEntity project =

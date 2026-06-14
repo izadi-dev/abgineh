@@ -5,6 +5,11 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextColor">#FF0000</item>
+
+    </style>
+    <style name="NavMenuTextStyle">
+        <item name="android:textSize">25sp</item>
     </style>
 
 </resources>
