@@ -1,4 +1,6 @@
 package com.example.abgineh;
 
-public class about {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class about extends AppCompatActivity {
 }

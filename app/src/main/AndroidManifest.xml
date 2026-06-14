@@ -34,6 +34,13 @@
         </activity>
         <activity android:name="com.example.abgineh.InvoiceActivity">
         </activity>
+        <activity android:name="com.example.abgineh.about">
+        </activity>
+        <activity android:name="com.example.abgineh.contact">
+        </activity>
+        <activity android:name="com.example.abgineh.tutorial">
+        </activity>
+
     </application>
 
 </manifest>

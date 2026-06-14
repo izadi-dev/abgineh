@@ -1,4 +1,6 @@
 package com.example.abgineh;
 
-public class contact {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class contact extends AppCompatActivity {
 }
