@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             int id = item.getItemId();
 
             if (id == R.id.nav_about) {
-                Intent intent = new Intent(MainActivity.this, about.class);
+                Intent intent = new Intent(MainActivity.this, aboutActivity.class);
                 startActivity(intent);
 //                Toast.makeText(MainActivity.this,"tttt",Toast.LENGTH_SHORT).show();
 

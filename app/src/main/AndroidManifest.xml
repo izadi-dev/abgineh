@@ -34,7 +34,7 @@
         </activity>
         <activity android:name="com.example.abgineh.InvoiceActivity">
         </activity>
-        <activity android:name="com.example.abgineh.about">
+        <activity android:name="com.example.abgineh.aboutActivity">
         </activity>
         <activity android:name="com.example.abgineh.contact">
         </activity>
