@@ -190,8 +190,17 @@ public class MainActivity extends AppCompatActivity {
 
         btnSave.setOnClickListener(
                 view ->{
+                    String name = nameproject.getText().toString().trim();
+                    if(db.projectDao().countbyName(name)>0)
+                {
+                    Toast.makeText(this,"پروژه با این نام قبلا ذخیره شده است",Toast.LENGTH_SHORT).show();
+
+
+                    return;
+                }
 
                     saveProject();
+                    btnSave.setEnabled(false);
                     Toast.makeText(MainActivity.this, "پروژه ذخیره شد", Toast.LENGTH_SHORT).show();
                 }
 
@@ -286,12 +295,21 @@ public class MainActivity extends AppCompatActivity {
         btnOptimize.setOnClickListener(
 
                 view -> {
-                    Intent intent =new Intent(MainActivity.this,OptimizActivity.class);
+                    if (pieces == null || pieces.isEmpty()) {
+                        Toast.makeText(this,
+                                "قطعه‌ای برای بهینه‌سازی وجود ندارد",
+                                Toast.LENGTH_SHORT).show();
+                        btnOptimize.setEnabled(false);
+                        return;
+                    }
+                    Intent intent = new Intent(MainActivity.this, OptimizActivity.class);
                     intent.putExtra(
                             "pieces",
                             (Serializable) pieces
                     );
-                    startActivity(intent);
+
+
+                        startActivity(intent);
 
 //                    optimizer =
 //                            new GlassOptimizer(
@@ -306,7 +324,8 @@ public class MainActivity extends AppCompatActivity {
 //
 //                    showSheet(currentSheet);
 //                    Toast.makeText(MainActivity.this, "بهینه انجام شد", Toast.LENGTH_SHORT).show();
-               });
+
+                });
 
 //        btnNext.setOnClickListener(
 //                view -> {
@@ -639,17 +658,14 @@ private void LoadProject(int id){
     private void saveProject() {
 
         String name = nameproject.getText().toString().trim();
+
         if (name == null || name.isEmpty()) {
             Toast.makeText(this,
                     "نام وارد کنید",
                     Toast.LENGTH_SHORT).show();
             return;
         }
-        if(db.projectDao().countbyName(name)>0)
-        {
-            Toast.makeText(this,"پروژه با این نام قبلا ذخیره شده است",Toast.LENGTH_SHORT).show();
-            return;
-        }
+
 
             ProjectEntity project =
                     new ProjectEntity();

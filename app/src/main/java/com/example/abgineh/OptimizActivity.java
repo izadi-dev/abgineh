@@ -80,12 +80,12 @@ public class OptimizActivity extends AppCompatActivity {
 
     }
 private  void runOptimaiz(){
-    if (pieces == null || pieces.isEmpty()) {
-        Toast.makeText(this,
-                "قطعه‌ای برای بهینه‌سازی وجود ندارد",
-                Toast.LENGTH_SHORT).show();
-        return;
-    }
+//    if (pieces == null || pieces.isEmpty()) {
+//        Toast.makeText(this,
+//                "قطعه‌ای برای بهینه‌سازی وجود ندارد",
+//                Toast.LENGTH_SHORT).show();
+//             return;
+//    }
     optimizer =
             new GlassOptimizer(
                     3210,

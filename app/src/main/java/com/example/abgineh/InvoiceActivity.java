@@ -45,7 +45,7 @@ public class InvoiceActivity extends AppCompatActivity {
 
         pieces = (List<GlassPiece>)
                 getIntent().getSerializableExtra("pieces");
-        int sheetCount =
+         sheetCount =
                 getIntent().getIntExtra(
                         "sheetCount", 0);
 
@@ -63,7 +63,7 @@ public class InvoiceActivity extends AppCompatActivity {
                     etPrice.getText().toString();
 
             if(priceText.isEmpty()) {
-                Toast.makeText(this, "مبغ را وارد کنید", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "مبلغ را وارد کنید", Toast.LENGTH_SHORT).show();
 
                 return;
             }
@@ -73,8 +73,8 @@ public class InvoiceActivity extends AppCompatActivity {
             StringBuilder result =
                     new StringBuilder();
 
-            double totalArea = 0;
-            double totalPrice = 0;
+             totalArea = 0;
+             totalPrice = 0;
 
             for(GlassPiece p : pieces){
 
