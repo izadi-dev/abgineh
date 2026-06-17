@@ -20,6 +20,7 @@ import com.abgineh.myapp.R;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class InvoiceActivity extends AppCompatActivity {
@@ -80,7 +81,7 @@ public class InvoiceActivity extends AppCompatActivity {
 
                 double area =
                         (p.width * p.height * p.quantity)
-                                / 10000.0;
+                                / 1000000.0;
 
                 double itemPrice =
                         area * pricePerMeter;
@@ -92,25 +93,35 @@ public class InvoiceActivity extends AppCompatActivity {
                         .append(p.width)
                         .append("×")
                         .append(p.height)
+                        .append("میلیمتر")
                         .append("\n");
 
                 result.append("تعداد: ")
                         .append(p.quantity)
                         .append("\n");
 
+//                result.append("متراژ: ")
+//                        .append(String.format("%.2f", area))
+//                        .append("\n");
+                DecimalFormat df = new DecimalFormat("#.##");
                 result.append("متراژ: ")
-                        .append(String.format("%.2f", area))
+                        .append(df.format(area))
+                        .append("متر مربع")
                         .append("\n");
 
                 result.append("مبلغ: ")
                         .append(String.format("%.0f", itemPrice))
                         .append("\n\n");
             }
-
+            DecimalFormat df = new DecimalFormat("#.##");
             result.append("-----------------\n");
             result.append("متراژ کل: ")
-                    .append(String.format("%.2f", totalArea))
+                    .append(df.format(totalArea))
+                    .append("متر مربع")
                     .append("\n");
+//            result.append("متراژ کل: ")
+//                    .append(String.format("%.2f", totalArea))
+//                    .append("\n");
 
             result.append("جمع کل: ")
                     .append(String.format("%.0f", totalPrice));
@@ -135,6 +146,7 @@ public class InvoiceActivity extends AppCompatActivity {
                         .append(p.width)
                         .append(" × ")
                         .append(p.height)
+                        .append(" میلی متر")
                         .append("\n");
 
                 invoice.append("تعداد: ")
@@ -215,13 +227,14 @@ public class InvoiceActivity extends AppCompatActivity {
 
         canvas.drawText(
                 "جمع کل: "
-                        + totalPrice
+                        + String.format("%,.0f", totalPrice)
                         + " تومان",
                 50,
                 y + 80,
                 paint);
-
         document.finishPage(page);
+
+
 
         try {
 
