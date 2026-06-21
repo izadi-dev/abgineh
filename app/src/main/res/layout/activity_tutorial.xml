@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_marginTop="30dp"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:orientation="horizontal">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+                        >
+
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="550dp"
+            android:background="@drawable/mainpage"
+            />
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="550dp"
+            android:background="@drawable/optimizpage"
+            />
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="550dp"
+            android:background="@drawable/invoicepage"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>
+

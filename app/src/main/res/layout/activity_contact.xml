@@ -2,24 +2,47 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="20dp">
+    android:background="@color/colorPrimary"
+    android:layout_marginTop="30dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center"
         >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:background="@drawable/baner"/>
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:layout_gravity="center"
+           android:padding="15dp"
+            android:textSize="16sp"
+            android:text="ارتباط با ما\n\n برای دریافت پشتیبانی،ارسال پیشنهادات،گزارش مشکلات وارتباط با تیم آبگینه،ازطریق گروه های رسمی ما در بله و تلگرام با ما در ارتباط باشید.\nنظرات وپیشنهادهای شما نقش مهمی در بهبود و توسعه اپلیکیشن آبگینه دارد."
+            />
+        <TextView
+            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="آیدی بله:"
+            android:background="@drawable/text_style"
+            android:gravity="center"
+            android:textSize="20sp"
             android:textColor="@color/colorPrimary"
             />
         <TextView
+            android:gravity="center"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimary"
-            android:text="آیدی تلگرام"
+            android:background="@drawable/text_style"
+            android:textSize="20sp"
+            android:text="آیدی تلگرام:"
             />
 </LinearLayout>
 

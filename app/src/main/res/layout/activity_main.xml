@@ -245,9 +245,9 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/colorBackground"
+        android:background="@color/colorPrimary"
         app:headerLayout="@layout/nav_header"
-        app:itemTextColor="@color/colorButten"
+        app:itemTextColor="@color/colorText"
         app:itemTextAppearance="@style/NavMenuTextStyle"
         app:menu="@menu/drawer"/>
 

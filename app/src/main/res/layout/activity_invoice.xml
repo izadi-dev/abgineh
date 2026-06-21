@@ -40,7 +40,7 @@
             android:textColor="@color/colorText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="قیمت هر متر مربع"
+            android:hint=" قیمت متر مربع به تومان"
             android:textColorHint="@color/colorText"
             android:background="@drawable/text_style"
             android:layout_marginTop="20dp"

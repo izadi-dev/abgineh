@@ -104,18 +104,21 @@ public class InvoiceActivity extends AppCompatActivity {
 //                        .append(String.format("%.2f", area))
 //                        .append("\n");
                 DecimalFormat df = new DecimalFormat("#.##");
+
                 result.append("متراژ: ")
                         .append(df.format(area))
                         .append("متر مربع")
                         .append("\n");
 
                 result.append("مبلغ: ")
-                        .append(String.format("%.0f", itemPrice))
+                        .append(String.format("%,.0f", itemPrice))
+                        .append("تومان")
                         .append("\n\n");
             }
             DecimalFormat df = new DecimalFormat("#.##");
             result.append("-----------------\n");
             result.append("متراژ کل: ")
+
                     .append(df.format(totalArea))
                     .append("متر مربع")
                     .append("\n");
@@ -124,7 +127,9 @@ public class InvoiceActivity extends AppCompatActivity {
 //                    .append("\n");
 
             result.append("جمع کل: ")
-                    .append(String.format("%.0f", totalPrice));
+                    .append("تومان")
+                    .append(String.format("%,.0f", totalPrice));
+
 
             tvInvoice.setText(result.toString());
         });
